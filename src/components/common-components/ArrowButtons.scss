@@ -1,0 +1,28 @@
+.ArrowButtons {
+  width: 30px;
+  position: absolute;
+  right: 40px;
+  top: 55%;
+
+
+
+  .back {
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
+  .divider {
+    height: 10px;
+    line-height: 45px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 50%;
+  }
+
+  .next {
+    transform: rotate(270deg);
+    cursor: pointer;
+  }
+
+
+}

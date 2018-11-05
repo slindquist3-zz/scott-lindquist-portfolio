@@ -1,29 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
-import App from './components/App'
-import View1 from './components/view1'
-import View2 from './components/view2'
 import './index.scss';
+import MenuIcon from './components/common-components/MenuIcon.js'
+import Slides from './components/main/Slides.js'
+import Archive from './components/main/Archive.js'
+import CollabHeader from './components/common-components/CollabHeader.js'
 
 const routing = (
   <Router>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/view1">View1</Link>
-        </li>
-        <li>
-          <Link to="/view2">View2</Link>
-        </li>
-      </ul>
-      <Route exact path="/" component={App} />
-      <Route path="/view1" component={View1} />
-      <Route path="/view2" component={View2} />
-    </nav>
+      <div>
+        <CollabHeader />
+          <Route exact path="/" component={Slides} />
+          <Route exact path="/archive" component={Archive} />
+      </div>
   </Router>
 );
 

@@ -1,0 +1,52 @@
+.Slide1 {
+
+  .left-side {
+    background-image: url("../../assets/images/Slide1-img.png");
+   background-repeat:no-repeat;
+   height:100vh;
+   width: 50%;
+   background-size: cover;
+   float:left;
+  }
+
+  .right-side {
+    float:right;
+    margin-top: 200px;
+    font-size: 36px;
+
+    .text-container {
+
+      position: relative;
+      top: 100px;
+      right: 250px;
+      width: 500px;
+
+
+      .header {
+        letter-spacing: 15px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        .creative {
+          display: block;
+        }
+
+        .muscle {
+          display: block;
+        }
+
+      }
+
+      .subheader {
+        margin-top: 40px;
+      }
+
+      .subcopy {
+        font-size: 14px;
+      }
+
+    }
+
+  }
+
+}
