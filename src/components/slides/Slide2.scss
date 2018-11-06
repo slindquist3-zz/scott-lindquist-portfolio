@@ -1,11 +1,10 @@
 @import '../../assets/partials/_animations';
 @import '../../assets/partials/_breakpoints';
 
-
-.Slide1 {
+.Slide2 {
 
   .left-side {
-   background-image: url("../../assets/images/Slide1-img.png");
+   background-image: url("../../assets/images/Slide2-img.png");
    background-repeat:no-repeat;
    height:100vh;
    width: 50%;
@@ -33,14 +32,6 @@
         letter-spacing: 15px;
         font-weight: 400;
         text-transform: uppercase;
-
-        .creative {
-          display: block;
-        }
-
-        .muscle {
-          display: block;
-        }
       }
 
       .subheader {
@@ -50,45 +41,22 @@
       .subcopy {
         font-size: 14px;
       }
+
     }
 
   }
 
   @media only screen and (max-width : $mobile-breakpoint) {
 
-    animation-name: slideinAll;
-    animation-duration: .5s;
-
     .left-side {
-      width: 100%;
-      height: 50vh;
-      background-size: cover;
-      margin: auto;
       animation-name: none;
     }
 
     .right-side {
-      width: 100%;
-      height: 50vh;
-      margin: 0;
       animation-name: none;
-
-      .text-container {
-        top: -60px;
-        right: 0;
-        left: 50px;
-        bottom: 50px;
-        width: 75%;
-        text-align: center;
-
-        .header {
-          font-size: 50px;
-
-        }
-      }
-
     }
-
-   }
+    animation-duration: .5s;
+    animation-name: slideinAll;
+  }
 
 }

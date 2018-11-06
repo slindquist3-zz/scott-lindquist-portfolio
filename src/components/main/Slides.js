@@ -2,10 +2,7 @@ import React from 'react'
 import Slide1 from '../slides/Slide1.js'
 import Slide2 from '../slides/Slide2.js'
 import MenuIcon from '../common-components/MenuIcon.js'
-import HomeIcon from '../common-components/HomeIcon.js'
-
 import ArrowButtons from '../common-components/ArrowButtons.js'
-
 
 export default class Slides extends React.Component {
 
@@ -22,20 +19,14 @@ export default class Slides extends React.Component {
     if (this.state.slide + 1 > 4) {
       return;
     }
-
-    this.setState({slide: this.state.slide + 1}, function() {
-      console.log(this.state.slide);
-    })
+    this.setState({slide: this.state.slide + 1});
   }
 
   handleClickBack = () => {
     if (this.state.slide - 1 < 1) {
       return;
     }
-
-    this.setState({slide: this.state.slide - 1}, function() {
-      console.log(this.state.slide);
-    })
+    this.setState({slide: this.state.slide - 1});
   }
 
   render() {
@@ -46,15 +37,15 @@ export default class Slides extends React.Component {
     }
 
     return (
-      <div>
+      <div className="Slides">
         <MenuIcon />
         <ArrowButtons
           slide={this.state.slide}
           handleClickBack={this.handleClickBack}
           handleClickNext={this.handleClickNext}
-          />
+        />
 
-          {slides[this.state.slide]}
+        {slides[this.state.slide]}
 
       </div>
     )

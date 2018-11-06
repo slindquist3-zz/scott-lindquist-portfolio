@@ -1,10 +1,11 @@
+@import '../../assets/partials/_animations';
+@import '../../assets/partials/_breakpoints';
+
 .ArrowButtons {
   width: 30px;
   position: absolute;
   right: 40px;
   top: 55%;
-
-
 
   .back {
     transform: rotate(90deg);
@@ -24,5 +25,8 @@
     cursor: pointer;
   }
 
+  @media only screen and (max-width : $mobile-breakpoint) {
+    top: 80%;
+  }
 
 }

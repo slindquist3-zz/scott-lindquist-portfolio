@@ -1,0 +1,29 @@
+@keyframes slideinLeft {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+@keyframes slideinRight {
+  from {
+    margin-top: -1000px;
+  }
+
+  to {
+    margin-top: 200px;
+  }
+}
+
+@keyframes slideinAll {
+  from {
+    margin-top: 1000px;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
