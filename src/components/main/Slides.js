@@ -3,6 +3,8 @@ import Slide1 from '../slides/Slide1.js'
 import Slide2 from '../slides/Slide2.js'
 import MenuIcon from '../common-components/MenuIcon.js'
 import ArrowButtons from '../common-components/ArrowButtons.js'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+
 
 export default class Slides extends React.Component {
 
@@ -15,13 +17,17 @@ export default class Slides extends React.Component {
 
     this.handleCLickNext = this.handleClickNext.bind(this);
     this.handleCLickBack = this.handleClickBack.bind(this);
+
   }
 
   handleClickNext = () => {
     if (this.state.slide + 1 > 4) {
       return;
     }
-    this.setState({slide: this.state.slide + 1});
+    this.setState({slide: this.state.slide + 1}, function() {
+      window.location.pathname = "/" + this.state.slide;
+    });
+
   }
 
   handleClickBack = () => {
@@ -33,12 +39,6 @@ export default class Slides extends React.Component {
 
   render() {
 
-    //imported compontents above and placed them in this object here to conditionally render, based on state
-    var slidesToRender = {
-      1: <Slide1/>,
-      2: <Slide2/>
-    }
-
     return (
       <div className="Slides">
         <MenuIcon />
@@ -49,9 +49,6 @@ export default class Slides extends React.Component {
           handleClickNext={this.handleClickNext}
           //we pass these two functions down so that the arrow button can call them. These functions change state.
         />
-
-        {/* access the above object and show current slide based on state  */}
-        {slidesToRender[this.state.slide]}
 
       </div>
     )

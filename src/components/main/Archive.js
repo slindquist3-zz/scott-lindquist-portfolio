@@ -9,10 +9,8 @@ export default function Archive() {
 
       <section className="top-section">
         <HomeIcon />
-
         <h1 className="header">Creative Muscle</h1>
         <h2 className="subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis lacus eget ex facilisis fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis lacus eget ex facilisis fermentum. </h2>
-
       </section>
 
       <section className="grid">
@@ -29,9 +27,7 @@ export default function Archive() {
         <div className="one-square"></div>
         <div className="one-square"></div>
         <div className="one-square"></div>
-
       </section>
-
 
     </div>
   )

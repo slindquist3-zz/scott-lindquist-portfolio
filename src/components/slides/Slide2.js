@@ -1,10 +1,14 @@
 import React from 'react'
 import './Slide2.scss'
+import ArrowButtons from '../common-components/ArrowButtons.js'
+
 
 export default function Slide2()  {
 
   return (
     <div className="Slide2">
+      <ArrowButtons/>
+
       <div className="left-side">
       </div>
       <div className="right-side">
