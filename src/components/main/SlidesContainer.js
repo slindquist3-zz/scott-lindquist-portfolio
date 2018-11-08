@@ -7,8 +7,6 @@ import Slide1 from '../slides/Slide1.js'
 import Slide2 from '../slides/Slide2.js'
 import Slide3 from '../slides/Slide3.js'
 
-
-
 export default class SlidesContainer extends React.Component {
 
   constructor(props) {
@@ -41,7 +39,6 @@ export default class SlidesContainer extends React.Component {
     } else {
       this.setState({slide: this.state.slide - 1});
     }
-
   }
 
   render() {
@@ -53,16 +50,14 @@ export default class SlidesContainer extends React.Component {
     }
 
     return (
-      <div className="Slides">
+      <div className="SlidesContainer">
         <MenuIcon />
         <ArrowButtons
           slide={this.state.slide}
           //we giving ArrowButtons the props of slide, which points to the current state of Slides component
           handleClickBack={this.handleClickBack}
           handleClickNext={this.handleClickNext}
-
         />
-
 
       {slidesToRender[this.state.slide]}
 

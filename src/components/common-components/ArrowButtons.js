@@ -1,7 +1,7 @@
 import React from 'react';
-import './ArrowButtons.scss';
 import { Link } from 'react-router-dom'
 
+import './ArrowButtons.scss';
 
 export default function ArrowButtons(props) {
 

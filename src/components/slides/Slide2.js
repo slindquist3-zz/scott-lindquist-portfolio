@@ -1,5 +1,6 @@
-import React from 'react'
-import './Slide2.scss'
+import React from 'react';
+
+import './Slide2.scss';
 
 export default function Slide2()  {
 
