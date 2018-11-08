@@ -1,11 +1,12 @@
 import React from 'react';
-import './HomeIcon.scss';
 import { Link } from 'react-router-dom'
+
+import './HomeIcon.scss';
 
 export default function HomeIcon() {
   return (
     <div className="HomeIcon">
-      <Link to="/">
+      <Link to="/1">
       <img alt="home icon" src={require("../../assets/images/home-icon.svg")} />
       </Link>
     </div>

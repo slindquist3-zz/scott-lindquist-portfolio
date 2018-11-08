@@ -1,43 +1,56 @@
 import React from 'react'
-import Slide1 from '../slides/Slide1.js'
-import Slide2 from '../slides/Slide2.js'
+
 import MenuIcon from '../common-components/MenuIcon.js'
 import ArrowButtons from '../common-components/ArrowButtons.js'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+
+import Slide1 from '../slides/Slide1.js'
+import Slide2 from '../slides/Slide2.js'
+import Slide3 from '../slides/Slide3.js'
 
 
-export default class Slides extends React.Component {
+
+export default class SlidesContainer extends React.Component {
 
   constructor(props) {
     super(props);
     //create state here and by default, set the value to 1 (slide1)
-    this.state = {
-      slide: 1
-    };
+
+    if (window.location.pathname === "/") {
+
+      this.state = {
+        slide: 1
+      }
+
+    } else {
+      this.state = { slide: parseInt(window.location.pathname.slice(1))}
+    }
 
     this.handleCLickNext = this.handleClickNext.bind(this);
     this.handleCLickBack = this.handleClickBack.bind(this);
-
   }
 
   handleClickNext = () => {
-    if (this.state.slide + 1 > 4) {
-      return;
-    }
-    this.setState({slide: this.state.slide + 1}, function() {
-      window.location.pathname = "/" + this.state.slide;
-    });
-
+    this.setState({slide: this.state.slide + 1});
   }
 
   handleClickBack = () => {
+
     if (this.state.slide - 1 < 1) {
       return;
+
+    } else {
+      this.setState({slide: this.state.slide - 1});
     }
-    this.setState({slide: this.state.slide - 1});
+
   }
 
   render() {
+
+    var slidesToRender = {
+      1: <Slide1 />,
+      2: <Slide2 />,
+      3: <Slide3 />
+    }
 
     return (
       <div className="Slides">
@@ -47,8 +60,12 @@ export default class Slides extends React.Component {
           //we giving ArrowButtons the props of slide, which points to the current state of Slides component
           handleClickBack={this.handleClickBack}
           handleClickNext={this.handleClickNext}
-          //we pass these two functions down so that the arrow button can call them. These functions change state.
+
         />
+
+
+      {slidesToRender[this.state.slide]}
+
 
       </div>
     )

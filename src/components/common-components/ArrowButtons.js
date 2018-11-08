@@ -1,13 +1,12 @@
 import React from 'react';
 import './ArrowButtons.scss';
+import { Link } from 'react-router-dom'
+
 
 export default function ArrowButtons(props) {
 
-
-
   function RenderBackArrow() {
-    var path = window.location.pathname;
-    if ( "/" || "/1") {
+    if (props.slide <= 1 ) {
       return <img className="back" alt="back" src={require("../../assets/images/arrow-gray.svg")} />
     } else {
       return <img className="back" alt="back" src={require("../../assets/images/arrow.svg")} />
@@ -15,51 +14,33 @@ export default function ArrowButtons(props) {
   }
 
   function RenderNextArrow() {
-    var path = window.location.pathname;
-    if (path === "/4" ) {
-      return <img className="next" alt="back" src={require("../../assets/images/arrow-gray.svg")} />
+    if (props.slide > 5 ) {
+      return <img className="next gray-arrow" alt="back" src={require("../../assets/images/arrow-gray.svg")} />
     } else {
       return <img className="next" alt="back" src={require("../../assets/images/arrow.svg")} />
     }
   }
 
-  function changePathForward() {
-
-    var currentPath = window.location.pathname;
-
-    if ( currentPath === "/" || currentPath === "/1") {
-      window.location.pathname = "/2";
-    } else if (parseInt(window.location.pathname.slice(1)) > 5){
-      var newPathInt = parseInt(currentPath.slice(1)) + 1;
-      window.location.pathname = "/" + newPathInt;
-    } else {
-      return;
-    }
-  }
-
-
-  function changePathBackward() {
-
-    var currentPath = window.location.pathname;
-
-    if ( currentPath.length === 1) {
-      return;
-    } else {
-
-      var newPathInt = parseInt(currentPath.slice(1)) - 1;
-      window.location.pathname = "/" + newPathInt;
-    }
-  }
-
   return (
     <div className="ArrowButtons">
-      <div className="arrow-button-back" onClick={changePathBackward}>
-        {RenderBackArrow()}
-      </div>
+
+      {
+        props.slide === 1
+        ?
+          <Link className=" gray-arrow arrow-button-back" onClick={(e) => e.preventDefault() } to="/">
+            {RenderBackArrow()}
+          </Link>
+        :
+          <Link className="arrow-button-back" onClick={props.handleClickBack} to={`/${props.slide - 1}`}>
+            {RenderBackArrow()}
+          </Link>
+      }
+
       <div className="divider"></div>
-      <div className="arrow-button-next" onClick={changePathForward}>
+
+      <Link className="arrow-button-next" onClick={props.handleClickNext} to={`/${props.slide + 1}`}>
         {RenderNextArrow()}
-      </div>
+      </Link>
     </div>
   );
 }
