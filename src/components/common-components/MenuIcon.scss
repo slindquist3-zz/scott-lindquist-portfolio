@@ -1,19 +1,5 @@
-@import '../../assets/partials/_animations';
-@import '../../assets/partials/_breakpoints';
+@import '../../assets/partials/_mixins';
 
 .MenuIcon {
-  position: absolute;
-  right: 30px;
-  top: 20px;
-  cursor: pointer;
-
-  @media only screen and (max-width : $mobile-breakpoint) {
-
-    right: 10px;
-    top: 10px;
-
-    .menuicon-img {
-      width: 80%;
-    }
-  }
+  @include TopCornerPlacement;
 }

@@ -25,12 +25,12 @@
     cursor: pointer;
   }
 
-  @media only screen and (max-width : $mobile-breakpoint) {
-    top: 80%;
-  }
-
   .gray-arrow {
     pointer-events: none;
+  }
+
+  @media only screen and (max-width : $mobile-breakpoint) {
+    top: 80%;
   }
 
 }

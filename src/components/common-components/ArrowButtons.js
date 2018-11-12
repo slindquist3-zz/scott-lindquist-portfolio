@@ -23,7 +23,6 @@ export default function ArrowButtons(props) {
 
   return (
     <div className="ArrowButtons">
-
       {
         props.slide === 1
         ?
@@ -35,7 +34,6 @@ export default function ArrowButtons(props) {
             {RenderBackArrow()}
           </Link>
       }
-
       <div className="divider"></div>
 
       <Link className="arrow-button-next" onClick={props.handleClickNext} to={`/${props.slide + 1}`}>
