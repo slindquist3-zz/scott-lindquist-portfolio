@@ -26,13 +26,13 @@ export default function ArrowButtons(props) {
       {
         props.slide === 1
         ?
-          <Link className=" gray-arrow arrow-button-back" onClick={(e) => e.preventDefault() } to="#">
-            {RenderBackArrow()}
-          </Link>
+        <Link className=" gray-arrow arrow-button-back" onClick={(e) => e.preventDefault() } to="#">
+          {RenderBackArrow()}
+        </Link>
         :
-          <Link className="arrow-button-back" onClick={props.handleClickBack} to={`/${props.slide - 1}`}>
-            {RenderBackArrow()}
-          </Link>
+        <Link className="arrow-button-back" onClick={props.handleClickBack} to={`/${props.slide - 1}`}>
+          {RenderBackArrow()}
+        </Link>
       }
       <div className="divider"></div>
 

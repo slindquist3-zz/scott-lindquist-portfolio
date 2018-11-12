@@ -9,11 +9,11 @@ import './index.scss';
 
 const routing = (
   <Router>
-      <div className="App-Container">
-          <Route exact path="/" component={SlidesContainer}/>
-          <Route path="/(1|2|3)/" component={SlidesContainer}/>
-          <Route exact path="/archive" component={Archive} />
-      </div>
+    <div className="App-Container">
+      <Route exact path="/" component={SlidesContainer}/>
+      <Route path="/(1|2|3)/" component={SlidesContainer}/>
+      <Route exact path="/archive" component={Archive} />
+    </div>
   </Router>
 );
 
