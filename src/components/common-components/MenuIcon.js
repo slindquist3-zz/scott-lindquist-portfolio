@@ -1,6 +1,7 @@
-import React from 'react'
-import './MenuIcon.scss'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import './MenuIcon.scss';
 
 export default function MenuIcon() {
   return (

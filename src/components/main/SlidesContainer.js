@@ -1,24 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-import MenuIcon from '../common-components/MenuIcon.js'
-import ArrowButtons from '../common-components/ArrowButtons.js'
+import MenuIcon from '../common-components/MenuIcon.js';
+import ArrowButtons from '../common-components/ArrowButtons.js';
+import CollabHeader from '../common-components/CollabHeader.js';
 
-import Slide1 from '../slides/Slide1.js'
-import Slide2 from '../slides/Slide2.js'
-import Slide3 from '../slides/Slide3.js'
+import Slide1 from '../slides/Slide1.js';
+import Slide2 from '../slides/Slide2.js';
+import Slide3 from '../slides/Slide3.js';
 
 export default class SlidesContainer extends React.Component {
 
   constructor(props) {
     super(props);
-    //create state here and by default, set the value to 1 (slide1)
 
     if (window.location.pathname === "/") {
-
       this.state = {
         slide: 1
       }
-
     } else {
       this.state = { slide: parseInt(window.location.pathname.slice(1))}
     }
@@ -32,10 +30,8 @@ export default class SlidesContainer extends React.Component {
   }
 
   handleClickBack = () => {
-
     if (this.state.slide - 1 < 1) {
       return;
-
     } else {
       this.setState({slide: this.state.slide - 1});
     }
@@ -51,17 +47,14 @@ export default class SlidesContainer extends React.Component {
 
     return (
       <div className="SlidesContainer">
+        <CollabHeader />
         <MenuIcon />
         <ArrowButtons
           slide={this.state.slide}
-          //we giving ArrowButtons the props of slide, which points to the current state of Slides component
           handleClickBack={this.handleClickBack}
           handleClickNext={this.handleClickNext}
         />
-
-      {slidesToRender[this.state.slide]}
-
-
+        {slidesToRender[this.state.slide]}
       </div>
     )
   }

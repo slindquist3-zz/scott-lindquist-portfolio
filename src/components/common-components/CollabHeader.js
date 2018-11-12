@@ -1,5 +1,6 @@
-import React from 'react'
-import './CollabHeader.scss'
+import React from 'react';
+
+import './CollabHeader.scss';
 
 export default function CollabHeader() {
   return (

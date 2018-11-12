@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import './ArrowButtons.scss';
 
@@ -15,9 +15,9 @@ export default function ArrowButtons(props) {
 
   function RenderNextArrow() {
     if (props.slide > 5 ) {
-      return <img className="next gray-arrow" alt="back" src={require("../../assets/images/arrow-gray.svg")} />
+      return <img className="next gray-arrow" alt="next" src={require("../../assets/images/arrow-gray.svg")} />
     } else {
-      return <img className="next" alt="back" src={require("../../assets/images/arrow.svg")} />
+      return <img className="next" alt="next" src={require("../../assets/images/arrow.svg")} />
     }
   }
 
@@ -27,7 +27,7 @@ export default function ArrowButtons(props) {
       {
         props.slide === 1
         ?
-          <Link className=" gray-arrow arrow-button-back" onClick={(e) => e.preventDefault() } to="/">
+          <Link className=" gray-arrow arrow-button-back" onClick={(e) => e.preventDefault() } to="#">
             {RenderBackArrow()}
           </Link>
         :
