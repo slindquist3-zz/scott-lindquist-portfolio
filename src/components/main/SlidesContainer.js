@@ -20,7 +20,7 @@ export default class SlidesContainer extends React.Component {
     } else {
       this.state = { slide: parseInt(window.location.pathname.slice(1))}
     }
-    
+
     this.handleCLickNext = this.handleClickNext.bind(this);
     this.handleCLickBack = this.handleClickBack.bind(this);
   }

@@ -7,7 +7,7 @@ export default function HomeIcon() {
   return (
     <div className="HomeIcon">
       <Link to="/1">
-      <img alt="home icon" src={require("../../assets/images/home-icon.svg")} />
+      <img className="home-icon-img" alt="home icon" src={require("../../assets/images/home-icon.svg")} />
       </Link>
     </div>
   );

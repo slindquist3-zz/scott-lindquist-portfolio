@@ -2,4 +2,12 @@
 
 .HomeIcon {
   @include TopCornerPlacement;
+
+  .home-icon-img:hover  {
+      // filter: invert(.5);
+      animation: lighten .2s;
+      filter: invert(.5);
+
+  }
+
 }

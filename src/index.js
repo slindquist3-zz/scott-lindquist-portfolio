@@ -12,6 +12,7 @@ const routing = (
     <div className="App-Container">
       <Route exact path="/" component={SlidesContainer}/>
       <Route path="/(1|2|3)/" component={SlidesContainer}/>
+
       <Route exact path="/archive" component={Archive} />
     </div>
   </Router>

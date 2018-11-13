@@ -27,3 +27,14 @@
     margin-top: 0;
   }
 }
+
+@keyframes back-change {
+   from { background: rgba(0,0,0,0)  }
+     to { background: rgba(0,0,0,0.85) }
+}
+
+@keyframes lighten {
+  from {filter: invert(0)}
+  to {  filter: invert(.5)}
+
+}
