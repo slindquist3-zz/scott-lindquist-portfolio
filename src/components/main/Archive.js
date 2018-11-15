@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Overlay from './Overlay.js';
 import HomeIcon from '../common-components/HomeIcon.js';
@@ -40,7 +41,7 @@ export default class Archive extends React.Component {
         {this.renderOverlay()}
 
         <section className="grid" onClick={this.toggleDisplayOverlay}>
-          <div className="one-square"></div>
+          <Link to="/1"><div className="one-square"></div></Link>
           <div className="one-square"></div>
           <div className="one-square"></div>
           <div className="one-square"></div>
