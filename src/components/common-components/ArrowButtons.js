@@ -7,17 +7,23 @@ export default function ArrowButtons(props) {
 
   function RenderBackArrow() {
     if (props.slide <= 1 ) {
-      return <img className="back" alt="back" src={require("../../assets/images/arrow-gray.svg")} />
+      // return <img className="back" alt="back" src={require("../../assets/images/arrow-gray.svg")} />
+      return <img className="back" alt="back" src="https://furthermore-cdn.equinox.com/cole-haan-2/static/media/arrow-gray.c9d414f8.svg" />
+
     } else {
-      return <img className="back" alt="back" src={require("../../assets/images/arrow.svg")} />
+      // return <img className="back" alt="back" src={require("../../assets/images/arrow.svg")} />
+      return <img className="back" alt="back" src="https://furthermore-cdn.equinox.com/cole-haan-2/static/media/arrow.6468634d.svg" />
     }
   }
 
   function RenderNextArrow() {
     if (props.slide > 5 ) {
-      return <img className="next gray-arrow" alt="next" src={require("../../assets/images/arrow-gray.svg")} />
+      // return <img className="next gray-arrow" alt="next" src={require("../../assets/images/arrow-gray.svg")} />
+      return <img className="next gray-arrow" alt="next" src="https://furthermore-cdn.equinox.com/cole-haan-2/static/media/arrow.6468634d.svg" />
+
     } else {
-      return <img className="next" alt="next" src={require("../../assets/images/arrow.svg")} />
+      // return <img className="next" alt="next" src={require("../../assets/images/arrow.svg")} />
+      return <img className="next" alt="next" src="https://furthermore-cdn.equinox.com/cole-haan-2/static/media/arrow.6468634d.svg" />
     }
   }
 
