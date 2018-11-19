@@ -4,6 +4,7 @@
 .Slide2 {
   height: 100vh;
   background-color: #EEEEEE;
+  display: block;
 
 
   .left-side {
@@ -50,8 +51,6 @@
   }
 
   @media only screen and (max-width : $mobile-breakpoint) {
-    animation-name: slideinAll;
-    animation-duration: .5s;
 
     .left-side {
       width: 100%;

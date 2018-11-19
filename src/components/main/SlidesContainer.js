@@ -19,6 +19,7 @@ export default class SlidesContainer extends React.Component {
 
         this.state = {
           slide: 1
+          //need to add class to slide currently being display that handles an ease out animaiton
         }
 
     } else {
@@ -27,7 +28,6 @@ export default class SlidesContainer extends React.Component {
       if (path[path.length-1] === "/") {
         path = path.slice(0, -1);
       }
-      // this.state = { slide: parseInt(window.location.pathname.slice(1))}
       this.state = { slide: parseInt(path.slice(path.length - 1))}
     }
 
@@ -36,14 +36,22 @@ export default class SlidesContainer extends React.Component {
   }
 
   handleClickNext = () => {
-    this.setState({slide: this.state.slide + 1});
+    this.setState({slide: this.state.slide + 1}, function() {
+      if (window.innerWidth < 768) {
+        document.querySelector('.currentSlide').children[0].classList.add('in');
+      }
+    });
   }
 
   handleClickBack = () => {
     if (this.state.slide - 1 < 1) {
       return;
     } else {
-      this.setState({slide: this.state.slide - 1});
+      this.setState({slide: this.state.slide - 1}, function() {
+        if (window.innerWidth < 768) {
+          document.querySelector('.currentSlide').children[0].classList.add('out');
+        }
+      });
     }
   }
 
@@ -64,8 +72,18 @@ export default class SlidesContainer extends React.Component {
           handleClickBack={this.handleClickBack}
           handleClickNext={this.handleClickNext}
         />
-        {slidesToRender[this.state.slide]}
+
+        <div className="currentSlide">
+          {slidesToRender[this.state.slide]}
+        </div>
       </div>
     )
   }
 }
+
+//what needs to happen
+
+//on click of the down arrow, the view should scroll down and display the next sequential component
+//on click of the up arrow, the view should scroll up an and display the previous sequential component
+
+//document.querySelector('.currentSlide').children[0]

@@ -3,6 +3,7 @@
 
 .Slide1 {
   height: 100vh;
+  display: block;
 
   .left-side {
    // background-image: url("../../assets/images/Slide1-img.png");
@@ -54,8 +55,6 @@
   }
 
   @media only screen and (max-width : $mobile-breakpoint) {
-    animation-name: slideinAll;
-    animation-duration: .5s;
 
     .left-side {
       width: 100%;
