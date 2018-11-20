@@ -13,16 +13,17 @@ export default class SlidesContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    if (window.location.pathname === "/" ||
-        window.location.pathname === "/creative-muscle/" ||
-        window.location.pathname === "/creative-muscle") {
+    if (window.location.hash === "/" ||
+        window.location.hash === "/#" ||
+        window.location.hash === "/creative-muscle/" ||
+        window.location.hash === "/creative-muscle/#") {
 
         this.state = {
           slide: 1
         }
 
     } else {
-      var path = window.location.pathname;
+      var path = window.location.hash;
 
       if (path[path.length-1] === "/") {
         path = path.slice(0, -1);
