@@ -19,7 +19,6 @@ export default class SlidesContainer extends React.Component {
 
         this.state = {
           slide: 1
-          //need to add class to slide currently being display that handles an ease out animaiton
         }
 
     } else {
@@ -72,7 +71,6 @@ export default class SlidesContainer extends React.Component {
           handleClickBack={this.handleClickBack}
           handleClickNext={this.handleClickNext}
         />
-
         <div className="currentSlide">
           {slidesToRender[this.state.slide]}
         </div>
@@ -80,10 +78,3 @@ export default class SlidesContainer extends React.Component {
     )
   }
 }
-
-//what needs to happen
-
-//on click of the down arrow, the view should scroll down and display the next sequential component
-//on click of the up arrow, the view should scroll up an and display the previous sequential component
-
-//document.querySelector('.currentSlide').children[0]
