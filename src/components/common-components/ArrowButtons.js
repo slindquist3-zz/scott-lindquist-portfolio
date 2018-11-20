@@ -21,7 +21,7 @@ export default function ArrowButtons(props) {
 
       <div className="divider"></div>
 
-      { props.slide < 5
+      { props.slide < 3
         ?
         <Link className="arrow-button-next" onClick={props.handleClickNext} to={`/${props.slide + 1}`}>
           <img className="next" alt="next" src="https://furthermore-cdn.equinox.com/creative-muscle/static/media/arrow.6468634d.svg" />
