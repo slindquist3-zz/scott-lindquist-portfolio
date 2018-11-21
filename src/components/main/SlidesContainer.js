@@ -15,6 +15,7 @@ export default class SlidesContainer extends React.Component {
 
     if (window.location.hash === "/" ||
         window.location.hash === "/#" ||
+        window.location.hash === "#/" ||
         window.location.hash === "/creative-muscle/" ||
         window.location.hash === "/creative-muscle/#") {
 
