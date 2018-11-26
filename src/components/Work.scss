@@ -1,0 +1,11 @@
+.Work {
+
+  .work-link {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: gray;
+    }
+  }
+}

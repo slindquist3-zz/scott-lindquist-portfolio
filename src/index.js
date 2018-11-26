@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Route, HashRouter, Link } from 'react-router-dom';
 import App from './components/App'
-import Work from './components/work'
-import About from './components/about'
+import Work from './components/Work'
+import About from './components/About'
 import './index.scss';
 
 const routing = (
