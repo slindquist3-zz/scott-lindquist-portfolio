@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/scott-lindquist-portfolio/static/js/runtime~main.1b2969f2.js"
   },
   {
-    "revision": "0f7be184f6363cf720ce",
-    "url": "/scott-lindquist-portfolio/static/js/main.0f7be184.chunk.js"
+    "revision": "4d75769276f890dd19c8",
+    "url": "/scott-lindquist-portfolio/static/js/main.4d757692.chunk.js"
   },
   {
     "revision": "983d36df0c3fe0b97dfc",
     "url": "/scott-lindquist-portfolio/static/js/1.983d36df.chunk.js"
   },
   {
-    "revision": "0f7be184f6363cf720ce",
+    "revision": "4d75769276f890dd19c8",
     "url": "/scott-lindquist-portfolio/static/css/main.9a9d8e82.chunk.css"
   },
   {
-    "revision": "476602c69d9ed1dc066142c0f52507e7",
+    "revision": "b5f7abf702cbd258aea230e441fc2055",
     "url": "/scott-lindquist-portfolio/index.html"
   }
 ];

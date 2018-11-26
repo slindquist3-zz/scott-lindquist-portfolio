@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/scott-lindquist-portfolio/precache-manifest.bbd8484b7ad4a8c6de48714fb3aefd51.js"
+  "/scott-lindquist-portfolio/precache-manifest.9c3f38cdbc898c23960a3ec30f383504.js"
 );
 
 workbox.clientsClaim();
