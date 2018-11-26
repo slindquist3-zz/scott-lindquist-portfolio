@@ -7,7 +7,7 @@ import About from './components/about'
 import './index.scss';
 
 const routing = (
-  <HashRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter>
     <nav>
       <ul>
         <li>
