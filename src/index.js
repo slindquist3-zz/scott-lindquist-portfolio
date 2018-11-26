@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Route, HashRouter, Link } from 'react-router-dom';
-import App from './components/App'
+import Home from './components/Home'
 import Work from './components/Work'
-import About from './components/About'
+import Demos from './components/Demos'
 import './index.scss';
 
 const routing = (
@@ -14,15 +14,15 @@ const routing = (
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">Demos</Link>
         </li>
         <li>
           <Link to="/work">Work</Link>
         </li>
       </ul>
-      <Route exact path="/" component={App} />
-      <Route path="/About" component={About} />
-      <Route path="/Work" component={Work} />
+      <Route exact path="/" component={Home} />
+      <Route path="/demos" component={Demos} />
+      <Route path="/work" component={Work} />
     </nav>
   </HashRouter>
 );
