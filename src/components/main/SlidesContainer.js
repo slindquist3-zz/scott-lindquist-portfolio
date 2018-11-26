@@ -37,9 +37,7 @@ export default class SlidesContainer extends React.Component {
 
   handleClickNext = () => {
     this.setState({slide: this.state.slide + 1}, function() {
-      if (window.innerWidth < 768) {
-        document.querySelector('.currentSlide').children[0].classList.add('in');
-      }
+      document.querySelector('.currentSlide').children[0].classList.add('out');
     });
   }
 
@@ -48,9 +46,7 @@ export default class SlidesContainer extends React.Component {
       return;
     } else {
       this.setState({slide: this.state.slide - 1}, function() {
-        if (window.innerWidth < 768) {
-          document.querySelector('.currentSlide').children[0].classList.add('out');
-        }
+        document.querySelector('.currentSlide').children[0].classList.add('in');
       });
     }
   }

@@ -1,86 +1,10 @@
 @import '../../assets/partials/_animations';
-@import '../../assets/partials/_breakpoints';
+@import '../../assets/partials/_mixins';
+
 
 .Slide1 {
-  height: 100vh;
-  display: block;
+  @include Section;
 
-  .left-side {
-   background-image: url("https://furthermore-cdn.equinox.com/creative-muscle/static/media/Slide1-img.ad8b2ab6.png");
-   background-repeat:no-repeat;
-   height:100vh;
-   width: 50%;
-   background-size: cover;
-   float:left;
-   animation-duration: .5s;
-   animation-name: slideinLeft;
-  }
+  background-color: lightgray;
 
-  .right-side {
-    float:right;
-    margin-top: 200px;
-    font-size: 36px;
-    animation-duration: .5s;
-    animation-name: slideinRight;
-
-    .text-container {
-      position: relative;
-      top: 100px;
-      right: 250px;
-      width: 500px;
-
-      .header {
-        letter-spacing: 15px;
-        font-weight: 400;
-        text-transform: uppercase;
-
-        .creative {
-          display: block;
-        }
-
-        .muscle {
-          display: block;
-        }
-      }
-
-      .subheader {
-        margin-top: 40px;
-      }
-
-      .subcopy {
-        font-size: 14px;
-      }
-    }
-  }
-
-  @media only screen and (max-width : $mobile-breakpoint) {
-
-    .left-side {
-      width: 100%;
-      height: 50vh;
-      background-size: cover;
-      margin: auto;
-      animation-name: none;
-    }
-
-    .right-side {
-      width: 100%;
-      height: 50vh;
-      margin: 0;
-      animation-name: none;
-
-      .text-container {
-        top: -60px;
-        right: 0;
-        left: 50px;
-        bottom: 50px;
-        width: 75%;
-        text-align: center;
-
-        .header {
-          font-size: 50px;
-        }
-      }
-    }
-  }
 }

@@ -1,6 +1,8 @@
 @import '../../assets/partials/_animations';
-@import '../../assets/partials/_breakpoints';
+@import '../../assets/partials/_mixins';
+
 
 .Slide3 {
-  display: block;
+  @include Section;
+  background-color: lightpink;
 }
