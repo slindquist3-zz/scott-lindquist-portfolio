@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import Overlay from './Overlay.js';
 import HomeIcon from '../common-components/HomeIcon.js';
-import CollabHeader from '../common-components/CollabHeader.js';
 
 import './Archive.scss';
 
@@ -32,7 +31,6 @@ export default class Archive extends React.Component {
     return (
       <div className="Archive">
         <section className="top-section">
-          <CollabHeader />
           <HomeIcon />
           <h1 className="header">Creative Muscle</h1>
           <h2 className="subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis lacus eget ex facilisis fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis lacus eget ex facilisis fermentum. </h2>

@@ -2,7 +2,6 @@ import React from 'react';
 
 import MenuIcon from '../common-components/MenuIcon.js';
 import ArrowButtons from '../common-components/ArrowButtons.js';
-import CollabHeader from '../common-components/CollabHeader.js';
 
 import Slide1 from '../slides/Slide1.js';
 import Slide2 from '../slides/Slide2.js';
@@ -66,7 +65,6 @@ export default class SlidesContainer extends React.Component {
 
     return (
       <div className="SlidesContainer">
-        <CollabHeader />
         <MenuIcon />
         <ArrowButtons
           slide={this.state.slide}
