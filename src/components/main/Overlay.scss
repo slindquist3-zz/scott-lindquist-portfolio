@@ -1,0 +1,31 @@
+@import '../../assets/partials/_animations';
+
+.Overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,0.85);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: back-change .3s linear;
+
+
+  .inner {
+    background-color: white;
+    height: 75vh;
+    position: absolute;
+    width: 75%;
+    left: 12.5%;
+    top: 12.5%;
+
+
+    .x-icon {
+      position: relative;
+      top: -40px;
+      left: 48.5%;
+      cursor: pointer;
+    }
+  }
+
+}

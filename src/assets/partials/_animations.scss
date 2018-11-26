@@ -1,0 +1,43 @@
+@keyframes slideinLeft {
+  from { margin-top: 100%; }
+  to { margin-top: 0%; }
+}
+
+@keyframes slideinRight {
+  from { margin-top: -1000px; }
+  to { margin-top: 200px; }
+}
+
+@keyframes slideinAll {
+  from { margin-top: 1000px; }
+  to { margin-top: 0; }
+}
+
+@keyframes back-change {
+   from { background: rgba(0,0,0,0)  }
+     to { background: rgba(0,0,0,0.85) }
+}
+
+@keyframes lighten {
+  from { filter: invert(0)}
+  to {  filter: invert(.5)}
+}
+
+.in {
+  @keyframes in {
+    from { margin-top: -1000px; }
+    to { margin-top: 0; }
+  }
+  animation-duration: .5s;
+  animation-name: in;
+}
+
+.out {
+  @keyframes out {
+    from { margin-top: 100%; }
+    to { margin-top: 0%; }
+  }
+  animation-duration: .5s;
+  animation-name: out;
+
+}

@@ -1,0 +1,33 @@
+.Archive {
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  .top-section {
+
+    .header {
+      letter-spacing: 1px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    .subheader {
+      font-weight: 400;
+    }
+  }
+
+  .grid {
+
+    .one-square {
+      width: 23%;
+      height: 200px;
+      background-color: lightgray;
+      margin-top: 20px;
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+
+
+}
