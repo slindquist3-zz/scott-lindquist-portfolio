@@ -10,6 +10,7 @@ export default function ArrowButtons(props) {
 
       { props.slide <= 1
         ?
+
         <Link className="gray-arrow arrow-button-back" onClick={(e) => e.preventDefault() } to="#">
           <img className="back" alt="back" src="https://furthermore-cdn.equinox.com/creative-muscle/static/media/arrow-gray.c9d414f8.svg" />
         </Link>
